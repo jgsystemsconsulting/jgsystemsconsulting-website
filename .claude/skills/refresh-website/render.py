@@ -76,9 +76,15 @@ def render_products(products: list[dict]) -> str:
         tier = p.get("tier")
         tier_html = f'<p class="tier">{html.escape(str(tier))}</p>' if tier else ""
         # Primary link -> live product page; secondary -> source repo.
+        # Optional `buy` (e.g. for pro/licensed products) -> a License button.
+        buy = p.get("buy")
+        buy_html = (
+            f' <a class="btn" href="{html.escape(str(buy))}">License &rarr;</a>'
+            if buy else ""
+        )
         links = (
             f'<p><a class="btn" href="{page}">Open &rarr;</a> '
-            f'<a class="btn ghost" href="{url}">Source &rarr;</a></p>'
+            f'<a class="btn ghost" href="{url}">Source &rarr;</a>{buy_html}</p>'
         )
         cells.append(
             f'<div class="cell"><h3>{name}</h3>{tier_html}'

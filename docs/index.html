@@ -10,7 +10,11 @@
 <meta property="og:description" content="Open-source and licensed SysML and AI engineering tooling. Local-first, agent-friendly, free to use.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://labs.jgsystemsconsulting.com/">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://labs.jgsystemsconsulting.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -56,6 +60,12 @@ section{padding:var(--pad-section) 0;border-bottom:1px solid var(--line)}
 .btn{display:inline-block;font-family:var(--mono);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;font-size:0.75rem;padding:.7rem 1.1rem;border:1px solid var(--line);background:var(--paper);color:var(--paper-ink);text-decoration:none}
 .btn.ghost{background:transparent;color:var(--text-hi)}
 .tier{font-family:var(--mono);font-size:0.625rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--mute)}
+.masthead nav{margin-left:auto;display:flex;gap:1.25rem}
+.masthead nav a{color:var(--mute);text-decoration:none}
+.masthead nav a:hover{color:var(--text-hi)}
+footer{padding:var(--pad-section) 0;font-family:var(--mono);font-size:0.6875rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--mute);display:flex;flex-wrap:wrap;gap:1.5rem}
+footer a{color:var(--mute);text-decoration:none}
+footer a:hover{color:var(--text-hi)}
 a:focus-visible,.btn:focus-visible{outline:2px solid var(--text-hi);outline-offset:2px}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
@@ -68,6 +78,7 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--text-hi);outline-offs
     <span>LICENCE: &copy; JG SYSTEMS CONSULTING LTD</span>
     <span>DOC-ID: JGSC-WEB-001</span>
     <span>REV 0.1.0</span>
+    <nav><a href="#products">Products</a><a href="#about">About</a><a href="https://www.jgsystemsconsulting.com">Consulting</a></nav>
   </header>
 
   <section id="home">
@@ -90,7 +101,7 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--text-hi);outline-offs
 <div class="grid grid-3">
 <div class="cell"><h3>jgs-voiceflow</h3><p class="tier">free</p><p>On-device push-to-talk voice dictation for Windows, with a code mode for dictating to AI coding assistants. Local-first, private, free to use.</p><p><a class="btn" href="https://jgsystemsconsulting.github.io/jgs-voiceflow/">Open &rarr;</a> <a class="btn ghost" href="https://github.com/jgsystemsconsulting/jgs-voiceflow">Source &rarr;</a></p></div>
 <div class="cell"><h3>jgs-magic-sysmlv1-mcp</h3><p class="tier">free</p><p>Bring Claude Code and any MCP agent to your live SysML v1 models in CATIA Magic: 130+ tools to query, audit, and edit the real model over a local, air-gapped connection.</p><p><a class="btn" href="https://jgsystemsconsulting.github.io/jgs-magic-sysmlv1-mcp/">Open &rarr;</a> <a class="btn ghost" href="https://github.com/jgsystemsconsulting/jgs-magic-sysmlv1-mcp">Source &rarr;</a></p></div>
-<div class="cell"><h3>jgs-magic-sysmlv1-pro</h3><p class="tier">pro</p><p>Licensed pro-extension JAR for the JGS SysML v1 MCP bridge. Unlocks write-tier and pro model tools for AI agents in CATIA Magic.</p><p><a class="btn" href="https://jgsystemsconsulting.github.io/jgs-magic-sysmlv1-pro/">Open &rarr;</a> <a class="btn ghost" href="https://github.com/jgsystemsconsulting/jgs-magic-sysmlv1-pro">Source &rarr;</a></p></div>
+<div class="cell"><h3>jgs-magic-sysmlv1-pro</h3><p class="tier">pro</p><p>Licensed pro-extension JAR for the JGS SysML v1 MCP bridge. Unlocks write-tier and pro model tools for AI agents in CATIA Magic.</p><p><a class="btn" href="https://jgsystemsconsulting.github.io/jgs-magic-sysmlv1-pro/">Open &rarr;</a> <a class="btn ghost" href="https://github.com/jgsystemsconsulting/jgs-magic-sysmlv1-pro">Source &rarr;</a> <a class="btn" href="mailto:support@jgsystemsconsulting.com?subject=License%20enquiry:%20jgs-magic-sysmlv1-pro">License &rarr;</a></p></div>
 <div class="cell"><h3>jgs-se-knowledge-packs</h3><p class="tier">free</p><p>46 agent knowledge packs distilling vetted, licence-clean systems-engineering standards (NASA, DoD, FAA, NIST, GAO, SEBoK) into on-demand Claude skills.</p><p><a class="btn" href="https://jgsystemsconsulting.github.io/jgs-se-knowledge-packs/">Open &rarr;</a> <a class="btn ghost" href="https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs">Source &rarr;</a></p></div>
 <div class="cell"><h3>jgs-reference-skill</h3><p class="tier">free</p><p>Convert vetted authoritative sources into licence-clean, citable knowledge packs, vetting the licence first, refuses non-redistributable sources.</p><p><a class="btn" href="https://jgsystemsconsulting.github.io/jgs-reference-skill/">Open &rarr;</a> <a class="btn ghost" href="https://github.com/jgsystemsconsulting/jgs-reference-skill">Source &rarr;</a></p></div>
 <div class="cell"><h3>jgs-goal-spec</h3><p class="tier">free</p><p>Turn a rough idea into a hardened engineering spec: goal-formatter to goal-spec to spec-review. Tool-agnostic Claude Code skills.</p><p><a class="btn" href="https://jgsystemsconsulting.github.io/jgs-goal-spec/">Open &rarr;</a> <a class="btn ghost" href="https://github.com/jgsystemsconsulting/jgs-goal-spec">Source &rarr;</a></p></div>
@@ -111,6 +122,13 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--text-hi);outline-offs
     Consulting enquiries: <a href="https://www.jgsystemsconsulting.com">www.jgsystemsconsulting.com</a><br>
     Source: <a href="https://github.com/jgsystemsconsulting">github.com/jgsystemsconsulting</a></p>
   </section>
+
+  <footer>
+    <span>&copy; JG Systems Consulting Ltd</span>
+    <span><a href="https://www.jgsystemsconsulting.com">Main site</a></span>
+    <span><a href="https://github.com/jgsystemsconsulting">GitHub</a></span>
+    <span><a href="mailto:support@jgsystemsconsulting.com">Contact</a></span>
+  </footer>
 
 </div>
 </body>
