@@ -10,7 +10,7 @@ products:
     order: 1
   - name: jgs-magic-sysmlv1-mcp
     url: https://github.com/jgsystemsconsulting/jgs-magic-sysmlv1-mcp
-    blurb: Bring Claude Code and any MCP agent to your live SysML v1 models in CATIA Magic: 130+ tools to query, audit, and edit the real model over a local, air-gapped connection.
+    blurb: "Bring Claude Code and any MCP agent to your live SysML v1 models in CATIA Magic: 130+ tools to query, audit, and edit the real model over a local, air-gapped connection."
     tier: free
     featured: true
     order: 2
@@ -34,7 +34,7 @@ products:
     order: 5
   - name: jgs-goal-spec
     url: https://github.com/jgsystemsconsulting/jgs-goal-spec
-    blurb: Turn a rough idea into a hardened engineering spec: goal-formatter to goal-spec to spec-review. Tool-agnostic Claude Code skills.
+    blurb: "Turn a rough idea into a hardened engineering spec: goal-formatter to goal-spec to spec-review. Tool-agnostic Claude Code skills."
     tier: free
     featured: false
     order: 6
