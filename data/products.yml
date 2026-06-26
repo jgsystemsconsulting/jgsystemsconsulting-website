@@ -2,39 +2,45 @@
 # Maintained by the refresh-website skill: new public repos are appended automatically;
 # hand-edited blurb / tier / featured / order are preserved on re-run.
 products:
-  - name: jgs-voiceflow
-    url: https://github.com/jgsystemsconsulting/jgs-voiceflow
-    blurb: On-device push-to-talk voice dictation for Windows, with a code mode for dictating to AI coding assistants. Local-first, private, free to use.
-    tier: free
-    featured: true
-    order: 1
-  - name: jgs-magic-sysmlv1-mcp
-    url: https://github.com/jgsystemsconsulting/jgs-magic-sysmlv1-mcp
-    blurb: "Bring Claude Code and any MCP agent to your live SysML v1 models in CATIA Magic: 130+ tools to query, audit, and edit the real model over a local, air-gapped connection."
-    tier: free
-    featured: true
-    order: 2
-  - name: jgs-magic-sysmlv1-pro
-    url: https://github.com/jgsystemsconsulting/jgs-magic-sysmlv1-pro
-    blurb: Licensed pro-extension JAR for the JGS SysML v1 MCP bridge. Unlocks write-tier and pro model tools for AI agents in CATIA Magic.
-    tier: pro
-    featured: false
-    order: 3
-  - name: jgs-se-knowledge-packs
-    url: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs
-    blurb: 46 agent knowledge packs distilling vetted, licence-clean systems-engineering standards (NASA, DoD, FAA, NIST, GAO, SEBoK) into on-demand Claude skills.
-    tier: free
-    featured: true
-    order: 4
-  - name: jgs-reference-skill
-    url: https://github.com/jgsystemsconsulting/jgs-reference-skill
-    blurb: Convert vetted authoritative sources into licence-clean, citable knowledge packs, vetting the licence first, refuses non-redistributable sources.
-    tier: free
-    featured: false
-    order: 5
-  - name: jgs-goal-spec
-    url: https://github.com/jgsystemsconsulting/jgs-goal-spec
-    blurb: "Turn a rough idea into a hardened engineering spec: goal-formatter to goal-spec to spec-review. Tool-agnostic Claude Code skills."
-    tier: free
-    featured: false
-    order: 6
+- name: jgs-voiceflow
+  url: https://github.com/jgsystemsconsulting/jgs-voiceflow
+  blurb: On-device push-to-talk voice dictation for Windows, with a code mode for dictating to AI coding assistants. Local-first, private, free to use.
+  tier: free
+  featured: true
+  order: 1
+- name: jgs-magic-sysmlv1-mcp
+  url: https://github.com/jgsystemsconsulting/jgs-magic-sysmlv1-mcp
+  blurb: 'Bring Claude Code and any MCP agent to your live SysML v1 models in CATIA Magic: 130+ tools to query, audit, and edit the real model over a local, air-gapped connection.'
+  tier: free
+  featured: true
+  order: 2
+- name: jgs-magic-sysmlv1-pro
+  url: https://github.com/jgsystemsconsulting/jgs-magic-sysmlv1-pro
+  blurb: Licensed pro-extension JAR for the JGS SysML v1 MCP bridge. Unlocks write-tier and pro model tools for AI agents in CATIA Magic.
+  tier: pro
+  featured: false
+  order: 3
+- name: jgs-se-knowledge-packs
+  url: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs
+  blurb: 46 agent knowledge packs distilling vetted, licence-clean systems-engineering standards (NASA, DoD, FAA, NIST, GAO, SEBoK) into on-demand Claude skills.
+  tier: free
+  featured: true
+  order: 4
+- name: jgs-reference-skill
+  url: https://github.com/jgsystemsconsulting/jgs-reference-skill
+  blurb: Convert vetted authoritative sources into licence-clean, citable knowledge packs, vetting the licence first, refuses non-redistributable sources.
+  tier: free
+  featured: false
+  order: 5
+- name: jgs-goal-spec
+  url: https://github.com/jgsystemsconsulting/jgs-goal-spec
+  blurb: 'Turn a rough idea into a hardened engineering spec: goal-formatter to goal-spec to spec-review. Tool-agnostic Claude Code skills.'
+  tier: free
+  featured: false
+  order: 6
+- name: jgs-magic-sysmlv1-read-skills
+  url: https://github.com/jgsystemsconsulting/jgs-magic-sysmlv1-read-skills
+  blurb: 'Read-only SysML v1 model analysis skills for CATIA Magic: navigate, inspect, audit, report. Free to use, works with Claude Code and other agents.'
+  tier: free
+  featured: false
+  order: 7
