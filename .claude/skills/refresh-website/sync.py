@@ -23,7 +23,7 @@ PRODUCTS_YML = ROOT / "data" / "products.yml"
 ORG = "jgsystemsconsulting"
 
 # Repos that are public but are not products to advertise (skip-list).
-SKIP = {".github", "jgsystemsconsulting-website"}
+SKIP = {".github", "jgsystemsconsulting-products", "jgsystemsconsulting-website"}
 
 
 def gh_public_repos() -> list[dict]:

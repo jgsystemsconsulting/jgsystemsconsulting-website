@@ -22,7 +22,7 @@ both consistent. The `gh` CLI must be installed and authenticated.
 
 ## Procedure
 
-Run from the repo root (`jgsystemsconsulting-website/`):
+Run from the repo root (`jgsystemsconsulting-products/`):
 
 1. **Sync products** -- discover public repos and additively merge into `data/products.yml`:
    ```bash
