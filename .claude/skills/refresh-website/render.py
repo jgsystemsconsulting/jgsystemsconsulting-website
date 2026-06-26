@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-"""Render the products and services sections of docs/index.html from sources.
+"""Render the products section of docs/index.html from data/products.yml.
 
-Sources:
-  data/products.yml      -> § PRODUCTS  (between <!-- BEGIN:products --> / <!-- END:products -->)
-  pages/services.md      -> § SERVICES  (between <!-- BEGIN:services --> / <!-- END:services -->)
+Source:
+  data/products.yml  -> § PRODUCTS  (between <!-- BEGIN:products --> / <!-- END:products -->)
 
-Writes only between the markers; the rest of index.html is untouched.
+Each product card links primarily to the live product page (`page`, a GitHub Pages
+site) and secondarily to the source repo (`url`). Writes only between the markers;
+the rest of index.html is untouched.
+
 Run from the repo root: python .claude/skills/refresh-website/render.py
 """
 from __future__ import annotations
@@ -17,7 +19,6 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 INDEX = ROOT / "docs" / "index.html"
 PRODUCTS_YML = ROOT / "data" / "products.yml"
-SERVICES_MD = ROOT / "pages" / "services.md"
 
 
 def load_products() -> list[dict]:
@@ -55,6 +56,8 @@ def _mini_parse_products(text: str) -> list[dict]:
 
 def _coerce(v: str):
     v = v.strip()
+    if (v.startswith("'") and v.endswith("'")) or (v.startswith('"') and v.endswith('"')):
+        v = v[1:-1]
     if v in ("true", "false"):
         return v == "true"
     if v.isdigit():
@@ -68,25 +71,20 @@ def render_products(products: list[dict]) -> str:
     for p in ordered:
         name = html.escape(str(p.get("name", "")))
         url = html.escape(str(p.get("url", "#")))
+        page = html.escape(str(p.get("page") or p.get("url", "#")))
         blurb = html.escape(str(p.get("blurb", "")))
         tier = p.get("tier")
         tier_html = f'<p class="tier">{html.escape(str(tier))}</p>' if tier else ""
+        # Primary link -> live product page; secondary -> source repo.
+        links = (
+            f'<p><a class="btn" href="{page}">Open &rarr;</a> '
+            f'<a class="btn ghost" href="{url}">Source &rarr;</a></p>'
+        )
         cells.append(
             f'<div class="cell"><h3>{name}</h3>{tier_html}'
-            f'<p>{blurb}</p><p><a class="btn ghost" href="{url}">View on GitHub &rarr;</a></p></div>'
+            f'<p>{blurb}</p>{links}</div>'
         )
     return '<h2>Products</h2>\n<div class="grid grid-3">\n' + "\n".join(cells) + "\n</div>"
-
-
-def render_services(md: str) -> str:
-    """Parse `### Title` + following paragraph blocks from services.md."""
-    blocks = re.findall(r"^###\s+(.+?)\n+(.+?)(?=\n###|\Z)", md, flags=re.S | re.M)
-    cells = []
-    for title, body in blocks:
-        t = html.escape(title.strip())
-        para = html.escape(" ".join(body.split()))
-        cells.append(f'<div class="cell"><h3>{t}</h3><p>{para}</p></div>')
-    return '<h2>Services</h2>\n<div class="grid grid-3">\n' + "\n".join(cells) + "\n</div>"
 
 
 def splice(index_text: str, key: str, inner: str) -> str:
@@ -100,11 +98,9 @@ def splice(index_text: str, key: str, inner: str) -> str:
 def main() -> int:
     index_text = INDEX.read_text(encoding="utf-8")
     products = load_products()
-    services_md = SERVICES_MD.read_text(encoding="utf-8")
     index_text = splice(index_text, "products", render_products(products))
-    index_text = splice(index_text, "services", render_services(services_md))
     INDEX.write_text(index_text, encoding="utf-8")
-    print(f"Rendered {len(products)} products and services into {INDEX.relative_to(ROOT)}")
+    print(f"Rendered {len(products)} products into {INDEX.relative_to(ROOT)}")
     return 0
 
 

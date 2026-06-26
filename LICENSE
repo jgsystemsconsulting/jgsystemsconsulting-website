@@ -1,0 +1,30 @@
+JG Systems Consulting Labs Website - Proprietary Licence
+
+Copyright (c) 2026 JG Systems Consulting Ltd. All rights reserved.
+
+This repository contains the source for the JG Systems Consulting Labs website
+(labs.jgsystemsconsulting.com), including its content, layout, styling, and the
+`refresh-website` tooling.
+
+You MAY:
+- View and read this repository for reference.
+
+You MAY NOT, without prior written permission from JG Systems Consulting Ltd:
+- Copy, reproduce, republish, or redistribute the website content, copy, or
+  design, in whole or in part.
+- Use the JG Systems Consulting name, brand, or marks.
+- Create derivative works from this repository.
+
+The products linked from this site are licensed separately, each under the
+licence stated in its own repository. This proprietary licence applies only to
+this website repository.
+
+Bundled web fonts (JetBrains Mono, Inter) are distributed under their own open
+font licences; see NOTICE.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM, OUT OF, OR IN CONNECTION WITH
+THE SOFTWARE OR ITS USE.
+
+Contact: support@jgsystemsconsulting.com

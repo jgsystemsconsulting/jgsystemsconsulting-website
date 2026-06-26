@@ -1,16 +1,18 @@
 # About / contact
 
-**Section:** § 03 - ABOUT
-**Purpose:** Background and how to get in touch.
+**Section:** § 02 - ABOUT
+**Purpose:** Background and how to get in touch. Products/open-source contact is support@;
+consulting goes to the main site.
 
 ## About
 
-JG Systems Consulting Ltd is a systems-engineering and AI tooling company. We specialise in
-model-based systems engineering and in making engineering models and standards usable by AI
-agents, local-first.
+JG Systems Consulting Ltd is an independent systems architecture and MBSE consultancy. This Labs
+site is where we publish the open-source and licensed tooling behind that practice: the same
+model-based engineering and agent tooling we use on client work, made available to the wider
+engineering community.
 
 ## Contact
 
-- GitHub: https://github.com/jgsystemsconsulting
-- Email: (add contact email before public flip)
-- LinkedIn: (add LinkedIn URL before public flip)
+- Products and open source: support@jgsystemsconsulting.com
+- Consulting enquiries: https://www.jgsystemsconsulting.com
+- Source: https://github.com/jgsystemsconsulting

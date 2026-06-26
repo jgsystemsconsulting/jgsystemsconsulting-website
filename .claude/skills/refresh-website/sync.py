@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """Sync data/products.yml with the org's current public repos (additive merge).
 
-- Adds repos not already in products.yml (blurb seeded from GitHub description).
+- Adds repos not already in products.yml (blurb seeded from GitHub description,
+  page link seeded from the repo's GitHub Pages site / homepage).
+- Backfills the `page:` link on existing entries that lack one (the only field
+  pulled live every run, since a repo's Pages site can be enabled after seeding).
 - Preserves existing blurb / tier / featured / order (never clobbered).
 - Flags repos in products.yml that are no longer public (prints a warning; does not delete).
 
@@ -26,7 +29,7 @@ SKIP = {".github", "jgsystemsconsulting-website"}
 def gh_public_repos() -> list[dict]:
     out = subprocess.run(
         ["gh", "repo", "list", ORG, "--visibility", "public",
-         "--json", "name,description,url", "--limit", "200"],
+         "--json", "name,description,url,homepageUrl", "--limit", "200"],
         capture_output=True, text=True,
     )
     if out.returncode != 0:
@@ -46,6 +49,7 @@ HEADER = (
     "# Source of truth for the PRODUCTS section of docs/index.html.\n"
     "# Maintained by the refresh-website skill: new public repos are appended automatically;\n"
     "# hand-edited blurb / tier / featured / order are preserved on re-run.\n"
+    "# `page` is the live product page (GitHub Pages); `url` is the source repo.\n"
 )
 
 
@@ -60,6 +64,11 @@ def deslop(text: str) -> str:
     return (text or "").replace(" — ", ", ").replace("—", ", ")
 
 
+def page_for(repo: dict) -> str:
+    """Live product page: the repo's homepageUrl if set, else the repo URL."""
+    return repo.get("homepageUrl") or repo.get("url") or ""
+
+
 def main() -> int:
     existing = load_yaml(PRODUCTS_YML.read_text(encoding="utf-8"))
     products = existing.get("products", [])
@@ -68,6 +77,7 @@ def main() -> int:
     live = {r["name"]: r for r in gh_public_repos() if r["name"] not in SKIP}
 
     added = []
+    backfilled = []
     next_order = max([p.get("order", 0) for p in products], default=0)
     for name, repo in live.items():
         if name not in by_name:
@@ -75,6 +85,7 @@ def main() -> int:
             entry = {
                 "name": name,
                 "url": repo["url"],
+                "page": page_for(repo),
                 "blurb": deslop(repo.get("description") or name),
                 "tier": "free",
                 "featured": False,
@@ -83,16 +94,24 @@ def main() -> int:
             products.append(entry)
             by_name[name] = entry
             added.append(name)
+        else:
+            # Backfill a missing/blank page link only; never touch curated fields.
+            cur = by_name[name]
+            if not cur.get("page"):
+                cur["page"] = page_for(repo)
+                backfilled.append(name)
 
     missing = [n for n in by_name if n not in live]
 
-    # Only rewrite the file when we actually appended something. A no-change run
-    # must leave products.yml byte-for-byte untouched (no comment loss, no churn).
-    if added:
+    # Rewrite only when something changed. A no-change run must leave products.yml
+    # byte-for-byte untouched (no comment loss, no churn).
+    if added or backfilled:
         existing["products"] = products
         PRODUCTS_YML.write_text(dump_yaml(existing), encoding="utf-8")
 
     print(f"Added {len(added)}: {', '.join(added) or '(none)'}")
+    if backfilled:
+        print(f"Backfilled page link on {len(backfilled)}: {', '.join(backfilled)}")
     if missing:
         print(f"WARNING: no longer public (left in place, review): {', '.join(missing)}")
     return 0

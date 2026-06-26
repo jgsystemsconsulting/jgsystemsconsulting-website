@@ -1,0 +1,14 @@
+JG Systems Consulting Labs Website
+Copyright (c) 2026 JG Systems Consulting Ltd. All rights reserved.
+
+This product bundles third-party web fonts, self-hosted under docs/fonts/, each
+under its own licence:
+
+- JetBrains Mono - SIL Open Font License 1.1
+  https://github.com/JetBrains/JetBrainsMono
+- Inter - SIL Open Font License 1.1
+  https://github.com/rsms/inter
+
+The SIL Open Font License permits redistribution and embedding of these fonts.
+The fonts are not covered by this repository's proprietary LICENCE; they remain
+under the OFL.

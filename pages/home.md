@@ -1,8 +1,8 @@
 # Home
 
-**Section:** § 00 - JG SYSTEMS CONSULTING
-**Purpose:** Front door. State who JG Systems is and the headline offering in two short
-paragraphs, then point to Services and Products.
+**Section:** § 00 - JGSC LABS
+**Purpose:** Front door for the open-source / products arm. Say what this Labs site is, point
+consulting visitors to the main Wix site, then lead into the products catalogue.
 
 ## Masthead
 
@@ -13,13 +13,13 @@ paragraphs, then point to Services and Products.
 
 ## Headline
 
-JG Systems Consulting Ltd builds model-based systems engineering tooling and the AI agents that
-operate it. We help engineering teams put their SysML models, standards, and workflows within
-reach of AI assistants, without sending anything to the cloud.
+Open-source SysML and AI tooling.
 
 ## Lead paragraph
 
-We work where systems engineering meets AI: SysML v1/v2 modelling in CATIA Magic and Cameo,
-agent-friendly architecture frameworks, and local-first tooling that keeps your models and data
-on your own machines. Our products are on GitHub; our consulting turns them into outcomes for
-your team.
+This is the open-source and product arm of JG Systems Consulting Ltd. We build local-first tooling
+that brings AI agents to real engineering models: SysML v1 MCP bridges for CATIA Magic, vetted
+systems-engineering knowledge packs, and skills for Claude Code, with nothing sent to the cloud.
+
+Consulting (systems architecture, MBSE engagements) lives on the main site at
+www.jgsystemsconsulting.com. Everything in Products is free to use unless marked otherwise.
