@@ -2,6 +2,7 @@
 # Maintained by the refresh-website skill: new public repos are appended automatically;
 # hand-edited blurb / tier / featured / order are preserved on re-run.
 # `page` is the live product page (GitHub Pages); `url` is the source repo.
+# Optional `buy`: a licensing/purchase link (renders a "License ->" button). Omit for free products.
 products:
 - name: jgs-voiceflow
   url: https://github.com/jgsystemsconsulting/jgs-voiceflow
@@ -24,6 +25,7 @@ products:
   featured: false
   order: 3
   page: https://jgsystemsconsulting.github.io/jgs-magic-sysmlv1-pro/
+  buy: mailto:support@jgsystemsconsulting.com?subject=License%20enquiry:%20jgs-magic-sysmlv1-pro
 - name: jgs-se-knowledge-packs
   url: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs
   blurb: 46 agent knowledge packs distilling vetted, licence-clean systems-engineering standards (NASA, DoD, FAA, NIST, GAO, SEBoK) into on-demand Claude skills.

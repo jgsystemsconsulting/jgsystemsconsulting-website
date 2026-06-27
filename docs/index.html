@@ -10,7 +10,11 @@
 <meta property="og:description" content="Open-source and licensed SysML and AI engineering tooling. Local-first, agent-friendly, free to use.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://labs.jgsystemsconsulting.com/">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://labs.jgsystemsconsulting.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -56,6 +60,12 @@ section{padding:var(--pad-section) 0;border-bottom:1px solid var(--line)}
 .btn{display:inline-block;font-family:var(--mono);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;font-size:0.75rem;padding:.7rem 1.1rem;border:1px solid var(--line);background:var(--paper);color:var(--paper-ink);text-decoration:none}
 .btn.ghost{background:transparent;color:var(--text-hi)}
 .tier{font-family:var(--mono);font-size:0.625rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--mute)}
+.masthead nav{margin-left:auto;display:flex;gap:1.25rem}
+.masthead nav a{color:var(--mute);text-decoration:none}
+.masthead nav a:hover{color:var(--text-hi)}
+footer{padding:var(--pad-section) 0;font-family:var(--mono);font-size:0.6875rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--mute);display:flex;flex-wrap:wrap;gap:1.5rem}
+footer a{color:var(--mute);text-decoration:none}
+footer a:hover{color:var(--text-hi)}
 a:focus-visible,.btn:focus-visible{outline:2px solid var(--text-hi);outline-offset:2px}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
@@ -68,6 +78,7 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--text-hi);outline-offs
     <span>LICENCE: &copy; JG SYSTEMS CONSULTING LTD</span>
     <span>DOC-ID: JGSC-WEB-001</span>
     <span>REV 0.1.0</span>
+    <nav><a href="#products">Products</a><a href="#about">About</a><a href="https://www.jgsystemsconsulting.com">Consulting</a></nav>
   </header>
 
   <section id="home">
@@ -90,27 +101,52 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--text-hi);outline-offs
 <div class="grid grid-3">
 <div class="cell"><h3>jgs-voiceflow</h3><p class="tier">free</p><p>On-device push-to-talk voice dictation for Windows, with a code mode for dictating to AI coding assistants. Local-first, private, free to use.</p><p><a class="btn" href="https://jgsystemsconsulting.github.io/jgs-voiceflow/">Open &rarr;</a> <a class="btn ghost" href="https://github.com/jgsystemsconsulting/jgs-voiceflow">Source &rarr;</a></p></div>
 <div class="cell"><h3>jgs-magic-sysmlv1-mcp</h3><p class="tier">free</p><p>Bring Claude Code and any MCP agent to your live SysML v1 models in CATIA Magic: 130+ tools to query, audit, and edit the real model over a local, air-gapped connection.</p><p><a class="btn" href="https://jgsystemsconsulting.github.io/jgs-magic-sysmlv1-mcp/">Open &rarr;</a> <a class="btn ghost" href="https://github.com/jgsystemsconsulting/jgs-magic-sysmlv1-mcp">Source &rarr;</a></p></div>
-<div class="cell"><h3>jgs-magic-sysmlv1-pro</h3><p class="tier">pro</p><p>Licensed pro-extension JAR for the JGS SysML v1 MCP bridge. Unlocks write-tier and pro model tools for AI agents in CATIA Magic.</p><p><a class="btn" href="https://jgsystemsconsulting.github.io/jgs-magic-sysmlv1-pro/">Open &rarr;</a> <a class="btn ghost" href="https://github.com/jgsystemsconsulting/jgs-magic-sysmlv1-pro">Source &rarr;</a></p></div>
+<div class="cell"><h3>jgs-magic-sysmlv1-pro</h3><p class="tier">pro</p><p>Licensed pro-extension JAR for the JGS SysML v1 MCP bridge. Unlocks write-tier and pro model tools for AI agents in CATIA Magic.</p><p><a class="btn" href="https://jgsystemsconsulting.github.io/jgs-magic-sysmlv1-pro/">Open &rarr;</a> <a class="btn ghost" href="https://github.com/jgsystemsconsulting/jgs-magic-sysmlv1-pro">Source &rarr;</a> <a class="btn" href="mailto:support@jgsystemsconsulting.com?subject=License%20enquiry:%20jgs-magic-sysmlv1-pro">License &rarr;</a></p></div>
 <div class="cell"><h3>jgs-se-knowledge-packs</h3><p class="tier">free</p><p>46 agent knowledge packs distilling vetted, licence-clean systems-engineering standards (NASA, DoD, FAA, NIST, GAO, SEBoK) into on-demand Claude skills.</p><p><a class="btn" href="https://jgsystemsconsulting.github.io/jgs-se-knowledge-packs/">Open &rarr;</a> <a class="btn ghost" href="https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs">Source &rarr;</a></p></div>
 <div class="cell"><h3>jgs-reference-skill</h3><p class="tier">free</p><p>Convert vetted authoritative sources into licence-clean, citable knowledge packs, vetting the licence first, refuses non-redistributable sources.</p><p><a class="btn" href="https://jgsystemsconsulting.github.io/jgs-reference-skill/">Open &rarr;</a> <a class="btn ghost" href="https://github.com/jgsystemsconsulting/jgs-reference-skill">Source &rarr;</a></p></div>
 <div class="cell"><h3>jgs-goal-spec</h3><p class="tier">free</p><p>Turn a rough idea into a hardened engineering spec: goal-formatter to goal-spec to spec-review. Tool-agnostic Claude Code skills.</p><p><a class="btn" href="https://jgsystemsconsulting.github.io/jgs-goal-spec/">Open &rarr;</a> <a class="btn ghost" href="https://github.com/jgsystemsconsulting/jgs-goal-spec">Source &rarr;</a></p></div>
 <div class="cell"><h3>jgs-magic-sysmlv1-read-skills</h3><p class="tier">free</p><p>Read-only SysML v1 model analysis skills for CATIA Magic: navigate, inspect, audit, report. Free to use, works with Claude Code and other agents.</p><p><a class="btn" href="https://jgsystemsconsulting.github.io/jgs-magic-sysmlv1-read-skills/">Open &rarr;</a> <a class="btn ghost" href="https://github.com/jgsystemsconsulting/jgs-magic-sysmlv1-read-skills">Source &rarr;</a></p></div>
 </div>
 <!-- END:products -->
+    <!-- BEGIN:coming-soon (hand-maintained; not touched by refresh-website) -->
+    <h2 style="margin-top:3rem">Coming soon</h2>
+    <div class="grid grid-3">
+<div class="cell"><h3>jgs-magic-sysmlv2-mcp</h3><p class="tier">coming soon &middot; free</p><p>SysML v2 MCP bridge for CATIA Magic / MSOSA. Brings Claude Code and any MCP agent to your live SysML v2 models, local and air-gapped, just like the v1 bridge.</p></div>
+<div class="cell"><h3>jgs-magic-sysmlv2-pro</h3><p class="tier">coming soon &middot; pro</p><p>Licensed pro-extension JAR for the SysML v2 bridge. Unlocks write-tier and pro model tools for AI agents in CATIA Magic.</p></div>
+<div class="cell"><h3>jgs-magic-sysmlv2-pro-skills</h3><p class="tier">coming soon &middot; pro</p><p>Pro skills pack for SysML v2 work in CATIA Magic, the v2 companion to the read skills shipping for v1.</p></div>
+<div class="cell"><h3>jgs-magic-grid</h3><p class="tier">coming soon</p><p>Magic Grid skills pack for CATIA Magic: build and maintain MagicGrid-structured SysML systems with AI agents.</p></div>
+<div class="cell"><h3>jgs-sparx-mcp-core</h3><p class="tier">coming soon &middot; free</p><p>Python MCP bridge for Sparx Enterprise Architect. Connect Claude Code and any MCP agent to your live EA models over local COM: navigate, inspect, author, search. Free generic core.</p></div>
+<div class="cell"><h3>jgs-sparx-mcp-sysmlv1</h3><p class="tier">coming soon &middot; pro</p><p>SysML v1 framework plugin for the Sparx EA bridge. Encodes SysML vocabulary, valid element and relation types, and validation so agents author semantically correct models.</p></div>
+<div class="cell"><h3>jgs-sparx-mcp-archimate</h3><p class="tier">coming soon &middot; pro</p><p>ArchiMate 3.2 framework plugin for the Sparx EA bridge. Validates relation types and applies correct stereotypes so agents build correct ArchiMate models in Enterprise Architect.</p></div>
+<div class="cell"><h3>jgs-sparx-mcp-naf4</h3><p class="tier">coming soon &middot; pro</p><p>NAF v4 framework plugin for the Sparx EA bridge. AI-assisted authoring of NATO Architecture Framework views for defence programmes, with framework-correct elements and validation.</p></div>
+<div class="cell"><h3>jgs-sparx-mcp-uaf</h3><p class="tier">coming soon &middot; pro</p><p>UAF framework plugin for the Sparx EA bridge. AI-assisted authoring of Unified Architecture Framework models in Enterprise Architect, air-gapped for defence and government work.</p></div>
+    </div>
+    <!-- END:coming-soon -->
   </section>
 
   <section id="about">
     <div class="sec-num">&sect; 02 - ABOUT</div>
     <h2>About</h2>
-    <p>JG Systems Consulting Ltd is an independent systems architecture and MBSE consultancy. This
-    Labs site is where we publish the open-source and licensed tooling behind that practice: the
-    same model-based engineering and agent tooling we use on client work, made available to the
-    wider engineering community.</p>
+    <p>JG Systems Consulting Ltd is an independent systems architecture and MBSE consultancy. JGSC
+    Labs is where we open-source the tooling we build for our own client work: bridges that connect
+    AI agents to live SysML models in CATIA Magic, vetted systems-engineering knowledge packs, and
+    focused skills for Claude Code.</p>
+    <p>Everything here is built to run where engineering work actually happens, behind the firewall
+    and on real models, not demos. The tools are local-first and air-gapped by default: your models
+    and data never leave your machine. Most are free; a few are licensed. All of them come from a
+    working MBSE practice, not a lab.</p>
     <p class="label">Contact</p>
     <p>Products and open source: <a href="mailto:support@jgsystemsconsulting.com">support@jgsystemsconsulting.com</a><br>
     Consulting enquiries: <a href="https://www.jgsystemsconsulting.com">www.jgsystemsconsulting.com</a><br>
     Source: <a href="https://github.com/jgsystemsconsulting">github.com/jgsystemsconsulting</a></p>
   </section>
+
+  <footer>
+    <span>&copy; JG Systems Consulting Ltd</span>
+    <span><a href="https://www.jgsystemsconsulting.com">Main site</a></span>
+    <span><a href="https://github.com/jgsystemsconsulting">GitHub</a></span>
+    <span><a href="mailto:support@jgsystemsconsulting.com">Contact</a></span>
+  </footer>
 
 </div>
 </body>
