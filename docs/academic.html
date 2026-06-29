@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Academic Licence - JG Systems Consulting Labs</title>
+<meta name="description" content="JG Systems Consulting Labs pro tooling is free for non-commercial academic use. Who qualifies, why we offer it, how to request access, and an optional citation.">
+<link rel="canonical" href="https://labs.jgsystemsconsulting.com/academic.html">
+<meta property="og:title" content="Academic Licence - JG Systems Consulting Labs">
+<meta property="og:description" content="JGSC Labs pro tooling is free for non-commercial academic use. Who qualifies, why, and how to request access.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://labs.jgsystemsconsulting.com/academic.html">
+<meta property="og:image" content="https://labs.jgsystemsconsulting.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+@font-face{font-family:'JetBrains Mono';src:url('fonts/JetBrainsMono-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'JetBrains Mono';src:url('fonts/JetBrainsMono-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'Inter';src:url('fonts/Inter-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Inter';src:url('fonts/Inter-SemiBold.woff2') format('woff2');font-weight:600;font-display:swap}
+:root{
+  --ink:#0a0a0b;--ink-2:#111113;--ink-3:#16171a;--ink-4:#1e2024;
+  --line:#2a2d33;--line-2:#3a3e46;
+  --mute:#6b7078;--mute-2:#8b9099;
+  --text:#c7ccd3;--text-hi:#e8ebf0;
+  --paper:#f4f2ec;--paper-ink:#0a0a0b;
+  --mono:'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;
+  --sans:'Inter',ui-sans-serif,system-ui,sans-serif;
+  --pad-x:clamp(24px,4vw,80px);--pad-section:clamp(48px,6vw,96px);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ink);color:var(--text);font-family:var(--sans);line-height:1.6}
+.wrap{max-width:1200px;margin:0 auto;padding:0 var(--pad-x)}
+a{color:var(--text-hi)}
+h1,h2,h3,.label{font-family:var(--mono);letter-spacing:-0.02em;color:var(--text-hi)}
+.label{font-size:0.6875rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--mute-2)}
+.masthead{display:flex;flex-wrap:wrap;gap:1.5rem;border-bottom:1px solid var(--line);padding:1rem 0;font-family:var(--mono);font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--mute)}
+section{padding:var(--pad-section) 0;border-bottom:1px solid var(--line)}
+.sec-num{font-family:var(--mono);font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--mute-2);font-size:0.75rem;margin-bottom:1.5rem}
+.grid{display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
+.cell{background:var(--ink-2);padding:1.5rem}
+.cell h3{margin:0 0 .5rem}
+@media(min-width:861px){.grid-3{grid-template-columns:repeat(3,1fr)}.grid-2{grid-template-columns:repeat(2,1fr)}}
+.btn{display:inline-block;font-family:var(--mono);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;font-size:0.75rem;padding:.7rem 1.1rem;border:1px solid var(--line);background:var(--paper);color:var(--paper-ink);text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--text-hi)}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.masthead nav{margin-left:auto;display:flex;gap:1.25rem}
+.masthead nav a{color:var(--mute);text-decoration:none}
+.masthead nav a:hover{color:var(--text-hi)}
+footer{padding:var(--pad-section) 0;font-family:var(--mono);font-size:0.6875rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--mute);display:flex;flex-wrap:wrap;gap:1.5rem}
+footer a{color:var(--mute);text-decoration:none}
+footer a:hover{color:var(--text-hi)}
+a:focus-visible,.btn:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--text-hi);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+/* form */
+.form{max-width:640px;display:grid;gap:1.25rem;margin-top:1rem}
+.field{display:grid;gap:.4rem}
+.field label{font-family:var(--mono);font-size:0.6875rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--mute-2)}
+.field .req{color:var(--text-hi)}
+.field input,.field textarea,.field select{font-family:var(--sans);font-size:1rem;color:var(--text-hi);background:var(--ink-2);border:1px solid var(--line);padding:.7rem .8rem;border-radius:0}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--line-2);outline:none}
+.field textarea{min-height:120px;resize:vertical}
+.field .hint{font-size:0.8125rem;color:var(--mute)}
+.form-status{font-family:var(--mono);font-size:0.8125rem;letter-spacing:0.04em;padding:.8rem 1rem;border:1px solid var(--line)}
+.form-status.ok{color:var(--text-hi);border-color:var(--line-2)}
+.form-status.err{color:#ffb4a8;border-color:#5a3a36}
+.hidden{display:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <span>CLASSIFICATION: PUBLIC</span>
+    <span>LICENCE: &copy; JG SYSTEMS CONSULTING LTD</span>
+    <span>DOC-ID: JGSC-WEB-003</span>
+    <span>REV 0.1.0</span>
+    <nav><a href="index.html#products">Products</a><a href="licensing.html">Licensing</a><a href="academic.html">Academic</a><a href="index.html#about">About</a><a href="https://www.jgsystemsconsulting.com">Consulting</a></nav>
+  </header>
+
+  <section id="academic-intro">
+    <div class="sec-num">&sect; 00 - ACADEMIC / NON-COMMERCIAL</div>
+    <h1>Free for academia.</h1>
+    <p>The JG Systems Consulting Labs pro tooling &mdash; the write-tier pro JARs and pro
+    skills that let AI agents author and edit live models in CATIA Magic and Sparx Enterprise
+    Architect &mdash; is free for non-commercial academic use. No fee, no trial period, no seat
+    count. The flagship licence, jgs-magic-sysmlv1-pro, is included.</p>
+    <p><a class="btn" href="#request">Request access &rarr;</a> <a class="btn ghost" href="licensing.html">Back to licensing &rarr;</a></p>
+  </section>
+
+  <section id="why">
+    <div class="sec-num">&sect; 01 - WHY WE DO THIS</div>
+    <h2>Putting the tools in your hands</h2>
+    <p>We want to support the academic community and see AI-assisted MBSE used more widely, and
+    the fastest way to do that is to get these capabilities to the people doing the teaching,
+    learning and research. Students and researchers are where the interesting work happens, and a
+    licence cost should not stand between you and it. We would rather you used the tooling than
+    worried about whether you could. Most people who qualify never realise they can simply ask
+    &mdash; so ask.</p>
+  </section>
+
+  <section id="who">
+    <div class="sec-num">&sect; 02 - WHO QUALIFIES</div>
+    <h2>Who qualifies</h2>
+    <div class="grid grid-3">
+      <div class="cell"><h3>Students</h3><p>Undergraduate, master's and PhD. Coursework, dissertations and theses.</p></div>
+      <div class="cell"><h3>Faculty &amp; staff</h3><p>Professors, lecturers, postdocs and research staff, for teaching and non-funded research.</p></div>
+      <div class="cell"><h3>Researchers &amp; classrooms</h3><p>Non-profit and independent researchers, and instructors running the tools cohort-wide across a course.</p></div>
+    </div>
+    <p style="margin-top:1.5rem;color:var(--mute)">"Non-commercial" means not for paid client or commercial delivery work. If the work funds revenue, that is a commercial licence &mdash; see <a href="licensing.html">licensing</a>.</p>
+  </section>
+
+  <section id="cite">
+    <div class="sec-num">&sect; 03 - A SMALL ASK: CITE THE WORK</div>
+    <h2>A small ask: cite the work</h2>
+    <p>If the tooling helped your work, we would appreciate &mdash; but do not require &mdash; a
+    citation or acknowledgement in your thesis, paper or report. It helps others find the tooling
+    and keeps the project going. This is a courtesy request, not a condition of the licence.</p>
+    <p>A paste-ready citation:</p>
+    <div class="cell" style="border:1px solid var(--line)">
+      <p style="margin:0">JG Systems Consulting Ltd. <em>jgs-magic-sysmlv1-pro</em> (MBSE AI tooling). https://labs.jgsystemsconsulting.com</p>
+    </div>
+    <p style="margin-top:1.5rem">Or BibTeX:</p>
+    <pre style="font-family:var(--mono);font-size:0.8125rem;background:var(--ink-2);border:1px solid var(--line);padding:1rem;overflow-x:auto;color:var(--text)">@misc{jgsc-mbse-tooling,
+  author       = {{JG Systems Consulting Ltd}},
+  title        = {jgs-magic-sysmlv1-pro (MBSE AI tooling)},
+  howpublished = {\url{https://labs.jgsystemsconsulting.com}},
+  note         = {Non-commercial academic licence}
+}</pre>
+  </section>
+
+  <section id="request">
+    <div class="sec-num">&sect; 04 - REQUEST ACCESS</div>
+    <h2>Request access</h2>
+    <p>Fill in the form and we will set you up. Using a university or institution email address
+    helps us verify eligibility quickly.</p>
+
+    <form class="form" id="academic-form" action="https://formspree.io/f/mjgqrjpa" method="POST">
+      <div class="field">
+        <label for="name">Name <span class="req">*</span></label>
+        <input type="text" id="name" name="name" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="email">Academic email <span class="req">*</span></label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
+        <span class="hint">Use your university/institution address where possible &mdash; it speeds up verification.</span>
+      </div>
+      <div class="field">
+        <label for="institution">Institution <span class="req">*</span></label>
+        <input type="text" id="institution" name="institution" autocomplete="organization" required>
+      </div>
+      <div class="field">
+        <label for="role">Role <span class="req">*</span></label>
+        <select id="role" name="role" required>
+          <option value="" selected disabled>Select your role&hellip;</option>
+          <option value="Student">Student (undergrad / master's / PhD)</option>
+          <option value="Faculty or staff">Faculty or staff</option>
+          <option value="Researcher">Researcher (non-profit / independent)</option>
+          <option value="Instructor">Instructor (classroom / cohort use)</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="product">Product <span class="req">*</span></label>
+        <select id="product" name="product" required>
+          <option value="" selected disabled>Select a product&hellip;</option>
+          <option value="jgs-magic-sysmlv1-pro">jgs-magic-sysmlv1-pro</option>
+          <option value="jgs-magic-sysmlv2-pro (coming soon)">jgs-magic-sysmlv2-pro (coming soon)</option>
+          <option value="jgs-magic-sysmlv2-pro-skills (coming soon)">jgs-magic-sysmlv2-pro-skills (coming soon)</option>
+          <option value="jgs-sparx-mcp-sysmlv1 (coming soon)">jgs-sparx-mcp-sysmlv1 (coming soon)</option>
+          <option value="jgs-sparx-mcp-archimate (coming soon)">jgs-sparx-mcp-archimate (coming soon)</option>
+          <option value="jgs-sparx-mcp-naf4 (coming soon)">jgs-sparx-mcp-naf4 (coming soon)</option>
+          <option value="jgs-sparx-mcp-uaf (coming soon)">jgs-sparx-mcp-uaf (coming soon)</option>
+          <option value="Other / not sure">Other / not sure</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="message">Intended use &amp; research area</label>
+        <textarea id="message" name="message" placeholder="What you are building, the course or thesis, which tool/version, timeline."></textarea>
+      </div>
+      <!-- honeypot: bots fill this, humans don't -->
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+      <input type="hidden" name="_subject" value="Academic licence request (labs site)">
+      <div>
+        <button type="submit" class="btn" id="submit-btn">Send request &rarr;</button>
+      </div>
+      <p class="form-status hidden" id="form-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p style="margin-top:2rem;color:var(--mute)">Prefer email? Write to
+    <a href="mailto:support@jgsystemsconsulting.com?subject=Academic%20licence%20request">support@jgsystemsconsulting.com</a>.</p>
+  </section>
+
+  <footer>
+    <span>&copy; JG Systems Consulting Ltd</span>
+    <span><a href="index.html">Labs home</a></span>
+    <span><a href="licensing.html">Licensing</a></span>
+    <span><a href="academic.html">Academic</a></span>
+    <span><a href="https://www.jgsystemsconsulting.com">Main site</a></span>
+    <span><a href="https://github.com/jgsystemsconsulting">GitHub</a></span>
+    <span><a href="mailto:support@jgsystemsconsulting.com">Contact</a></span>
+  </footer>
+
+</div>
+<script>
+// ponytail: AJAX submit so users stay on-page; plain POST still works if JS is off
+(function(){
+  var form = document.getElementById('academic-form');
+  var status = document.getElementById('form-status');
+  var btn = document.getElementById('submit-btn');
+  if(!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    btn.disabled = true;
+    status.className = 'form-status'; status.classList.remove('hidden');
+    status.textContent = 'Sending…';
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: {'Accept': 'application/json'}
+    }).then(function(res){
+      if(res.ok){
+        form.reset();
+        status.className = 'form-status ok';
+        status.textContent = 'Thanks — your request is in. We’ll reply by email shortly.';
+      } else {
+        return res.json().then(function(data){
+          var msg = (data && data.errors) ? data.errors.map(function(e){return e.message}).join(', ') : 'Something went wrong. Please email support@jgsystemsconsulting.com.';
+          status.className = 'form-status err'; status.textContent = msg;
+          btn.disabled = false;
+        });
+      }
+    }).catch(function(){
+      status.className = 'form-status err';
+      status.textContent = 'Network error. Please email support@jgsystemsconsulting.com.';
+      btn.disabled = false;
+    });
+  });
+})();
+</script>
+</body>
+</html>
