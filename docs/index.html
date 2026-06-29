@@ -56,10 +56,19 @@ section{padding:var(--pad-section) 0;border-bottom:1px solid var(--line)}
 .grid{display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
 .cell{background:var(--ink-2);padding:1.5rem}
 .cell h3{margin:0 0 .5rem}
-@media(min-width:861px){.grid-3{grid-template-columns:repeat(3,1fr)}.grid-2{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:861px){.grid-3{grid-template-columns:repeat(3,1fr)}.grid-2{grid-template-columns:repeat(2,1fr)}
+/* fill trailing empty tracks: a row's last cell stretches to the grid edge */
+.grid-3>.cell:last-child:nth-child(3n+1){grid-column:span 3}
+.grid-3>.cell:last-child:nth-child(3n+2){grid-column:span 2}}
 .btn{display:inline-block;font-family:var(--mono);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;font-size:0.75rem;padding:.7rem 1.1rem;border:1px solid var(--line);background:var(--paper);color:var(--paper-ink);text-decoration:none}
 .btn.ghost{background:transparent;color:var(--text-hi)}
 .tier{font-family:var(--mono);font-size:0.625rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--mute)}
+.coming-soon{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.5rem}
+.coming-soon summary{cursor:pointer;display:flex;gap:.75rem;align-items:baseline;list-style:none;user-select:none}
+.coming-soon summary::-webkit-details-marker{display:none}
+.coming-soon summary::before{content:'+ ';font-family:var(--mono);color:var(--mute-2);font-weight:700}
+.coming-soon[open] summary::before{content:'\2212 '}
+.coming-soon summary:hover .label{color:var(--text-hi)}
 .masthead nav{margin-left:auto;display:flex;gap:1.25rem}
 .masthead nav a{color:var(--mute);text-decoration:none}
 .masthead nav a:hover{color:var(--text-hi)}
@@ -78,24 +87,23 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--text-hi);outline-offs
     <span>LICENCE: &copy; JG SYSTEMS CONSULTING LTD</span>
     <span>DOC-ID: JGSC-WEB-001</span>
     <span>REV 0.1.0</span>
-    <nav><a href="#products">Products</a><a href="licensing.html">Licensing</a><a href="#about">About</a><a href="https://www.jgsystemsconsulting.com">Consulting</a></nav>
+    <nav><a href="#products">Products</a><a href="licensing.html">Licensing</a><a href="academic.html">Academic</a><a href="#about">About</a><a href="https://www.jgsystemsconsulting.com">Consulting</a></nav>
   </header>
 
   <section id="home">
     <div class="sec-num">&sect; 00 - JGSC LABS</div>
     <h1>Open-source SysML and AI tooling.</h1>
-    <p>This is the open-source and product arm of JG Systems Consulting Ltd. We build local-first
-    tooling that brings AI agents to real engineering models: SysML v1 MCP bridges for CATIA Magic,
-    vetted systems-engineering knowledge packs, and skills for Claude Code, with nothing sent to
-    the cloud.</p>
-    <p>Looking for consulting? Systems architecture and MBSE engagements live on the main site at
-    <a href="https://www.jgsystemsconsulting.com">www.jgsystemsconsulting.com</a>. Everything below
-    is free to use unless marked otherwise.</p>
+    <p>Local-first MCP bridges, knowledge packs, and Claude Code skills that bring AI agents to real
+    engineering models, with nothing sent to the cloud.</p>
     <p><a class="btn" href="#products">Products &rarr;</a> <a class="btn ghost" href="https://www.jgsystemsconsulting.com">Consulting &rarr;</a></p>
+    <p style="color:var(--mute);max-width:65ch">The open-source and product arm of JG Systems Consulting Ltd. Everything below is free to use
+    unless marked otherwise. Systems architecture and MBSE engagements live on the main site at
+    <a href="https://www.jgsystemsconsulting.com">www.jgsystemsconsulting.com</a>.</p>
   </section>
 
   <section id="products">
     <div class="sec-num">&sect; 01 - PRODUCTS</div>
+    <p style="color:var(--mute)">Pro tooling is free for non-commercial academic use &mdash; <a href="academic.html">see the academic licence &rarr;</a></p>
     <!-- BEGIN:products -->
 <h2>Products</h2>
 <div class="grid grid-3">
@@ -109,8 +117,9 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--text-hi);outline-offs
 </div>
 <!-- END:products -->
     <!-- BEGIN:coming-soon (hand-maintained; not touched by refresh-website) -->
-    <h2 style="margin-top:3rem">Coming soon</h2>
-    <div class="grid grid-3">
+    <details class="coming-soon">
+    <summary><span class="label">Coming soon</span> <span class="tier">9 in development</span></summary>
+    <div class="grid grid-3" style="margin-top:1.5rem">
 <div class="cell"><h3>jgs-magic-sysmlv2-mcp</h3><p class="tier">coming soon &middot; free</p><p>SysML v2 MCP bridge for CATIA Magic / MSOSA. Brings Claude Code and any MCP agent to your live SysML v2 models, local and air-gapped, just like the v1 bridge.</p></div>
 <div class="cell"><h3>jgs-magic-sysmlv2-pro</h3><p class="tier">coming soon &middot; pro</p><p>Licensed pro-extension JAR for the SysML v2 bridge. Unlocks write-tier and pro model tools for AI agents in CATIA Magic.</p></div>
 <div class="cell"><h3>jgs-magic-sysmlv2-pro-skills</h3><p class="tier">coming soon &middot; pro</p><p>Pro skills pack for SysML v2 work in CATIA Magic, the v2 companion to the read skills shipping for v1.</p></div>
@@ -121,6 +130,7 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--text-hi);outline-offs
 <div class="cell"><h3>jgs-sparx-mcp-naf4</h3><p class="tier">coming soon &middot; pro</p><p>NAF v4 framework plugin for the Sparx EA bridge. AI-assisted authoring of NATO Architecture Framework views for defence programmes, with framework-correct elements and validation.</p></div>
 <div class="cell"><h3>jgs-sparx-mcp-uaf</h3><p class="tier">coming soon &middot; pro</p><p>UAF framework plugin for the Sparx EA bridge. AI-assisted authoring of Unified Architecture Framework models in Enterprise Architect, air-gapped for defence and government work.</p></div>
     </div>
+    </details>
     <!-- END:coming-soon -->
   </section>
 
@@ -144,6 +154,7 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--text-hi);outline-offs
   <footer>
     <span>&copy; JG Systems Consulting Ltd</span>
     <span><a href="licensing.html">Licensing</a></span>
+    <span><a href="academic.html">Academic</a></span>
     <span><a href="https://www.jgsystemsconsulting.com">Main site</a></span>
     <span><a href="https://github.com/jgsystemsconsulting">GitHub</a></span>
     <span><a href="mailto:support@jgsystemsconsulting.com">Contact</a></span>
