@@ -54,3 +54,24 @@ products:
   featured: false
   order: 7
   page: https://jgsystemsconsulting.github.io/jgs-magic-sysmlv1-read-skills/
+- name: jgs-archi-mcp
+  url: https://github.com/jgsystemsconsulting/jgs-archi-mcp
+  page: https://jgsystemsconsulting.github.io/jgs-archi-mcp/
+  blurb: 'Live MCP bridge for Archi: 69 tools bring Claude Code and any MCP agent into a running ArchiMate model, with native undo/redo and a human-in-the-loop approval gate.'
+  tier: free
+  featured: true
+  order: 8
+- name: awesome-mcp-servers
+  url: https://github.com/jgsystemsconsulting/awesome-mcp-servers
+  page: https://glama.ai/mcp/servers
+  blurb: A collection of MCP servers.
+  tier: free
+  featured: false
+  order: 9
+- name: jgs-superpowers
+  url: https://github.com/jgsystemsconsulting/jgs-superpowers
+  page: https://github.com/jgsystemsconsulting/jgs-superpowers
+  blurb: An agentic skills framework & software development methodology that works.
+  tier: free
+  featured: false
+  order: 10
