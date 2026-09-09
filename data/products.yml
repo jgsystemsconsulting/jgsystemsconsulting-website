@@ -49,7 +49,7 @@ products:
   page: https://jgsystemsconsulting.github.io/jgs-goal-spec/
 - name: jgs-magic-sysmlv1-read-skills
   url: https://github.com/jgsystemsconsulting/jgs-magic-sysmlv1-read-skills
-  blurb: 'Read-only SysML v1 model analysis skills for CATIA Magic: navigate, inspect, audit, report. Free to use, works with Claude Code and other agents.'
+  blurb: '18 free, read-only SysML v1 analysis skills for CATIA Magic (MSOSA): navigate, inspect, audit, and report via /jgs-v1 over the jgs-magic-sysmlv1-mcp bridge. Works with ZCode, Claude Code, Codex, Gemini CLI, Copilot, and Cursor.'
   tier: free
   featured: false
   order: 7
