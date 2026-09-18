@@ -110,3 +110,10 @@ products:
   tier: free
   featured: false
   order: 15
+- name: awesome-digital-engineering
+  url: https://github.com/jgsystemsconsulting/awesome-digital-engineering
+  page: https://jgsystemsconsulting.github.io/awesome-digital-engineering/
+  blurb: Curated digital engineering resources for practitioners (digital thread, MBD, policy and standards that bind them).
+  tier: free
+  featured: false
+  order: 16
