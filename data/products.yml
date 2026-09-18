@@ -96,3 +96,10 @@ products:
   tier: free
   featured: false
   order: 13
+- name: awesome-mbse
+  url: https://github.com/jgsystemsconsulting/awesome-mbse
+  page: https://jgsystemsconsulting.github.io/awesome-mbse/
+  blurb: Curated MBSE and SysML resources for practitioners (Magic Grid, Cameo, openable models, and the broader ecosystem). Hub of the awesome-mbse list family.
+  tier: free
+  featured: false
+  order: 14
