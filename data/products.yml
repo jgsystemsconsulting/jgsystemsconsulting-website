@@ -89,3 +89,10 @@ products:
   tier: free
   featured: false
   order: 12
+- name: awesome-requirements-engineering
+  url: https://github.com/jgsystemsconsulting/awesome-requirements-engineering
+  page: https://jgsystemsconsulting.github.io/awesome-requirements-engineering/
+  blurb: Curated requirements engineering resources for practitioners (standards, methods, interchange formats, tools, books, and community).
+  tier: free
+  featured: false
+  order: 13
