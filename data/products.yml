@@ -28,7 +28,7 @@ products:
   buy: mailto:support@jgsystemsconsulting.com?subject=License%20enquiry:%20jgs-magic-sysmlv1-pro
 - name: jgs-se-knowledge-packs
   url: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs
-  blurb: 46 agent knowledge packs distilling vetted, licence-clean systems-engineering standards (NASA, DoD, FAA, NIST, GAO, SEBoK) into on-demand Claude skills.
+  blurb: 63 systems-engineering knowledge packs (+2 signposts) distilling vetted, licence-clean standards (NASA, DoD, FAA, NIST, GAO, SEBoK) into on-demand agent skills.
   tier: free
   featured: true
   order: 4
@@ -54,31 +54,38 @@ products:
   featured: false
   order: 7
   page: https://jgsystemsconsulting.github.io/jgs-magic-sysmlv1-read-skills/
+- name: jgs-sysmlv2-api-mcp
+  url: https://github.com/jgsystemsconsulting/jgs-sysmlv2-api-mcp
+  page: https://jgsystemsconsulting.github.io/jgs-sysmlv2-api-mcp/
+  blurb: 'MCP server for the OMG SysML v2 REST API: 39 tools for navigating, versioning, and authoring SysML v2 models with staged, token-confirmed commits.'
+  tier: free
+  featured: false
+  order: 8
 - name: jgs-archi-mcp
   url: https://github.com/jgsystemsconsulting/jgs-archi-mcp
   page: https://jgsystemsconsulting.github.io/jgs-archi-mcp/
   blurb: 'Live MCP bridge for Archi: 69 tools bring Claude Code and any MCP agent into a running ArchiMate model, with native undo/redo and a human-in-the-loop approval gate.'
   tier: free
   featured: true
-  order: 8
-- name: awesome-mcp-servers
-  url: https://github.com/jgsystemsconsulting/awesome-mcp-servers
-  page: https://glama.ai/mcp/servers
-  blurb: A collection of MCP servers.
-  tier: free
-  featured: false
   order: 9
-- name: jgs-superpowers
-  url: https://github.com/jgsystemsconsulting/jgs-superpowers
-  page: https://github.com/jgsystemsconsulting/jgs-superpowers
-  blurb: An agentic skills framework & software development methodology that works.
+- name: jgs-archi-skills
+  url: https://github.com/jgsystemsconsulting/jgs-archi-skills
+  page: https://jgsystemsconsulting.github.io/jgs-archi-skills/
+  blurb: Agent skills for ArchiMate modelling in Archi. One orchestrator plus specialists drive the JGS Archi Bridge MCP. Works with Claude Code, Cursor, Gemini CLI, Codex, Copilot, and ZCode.
   tier: free
-  featured: false
+  featured: true
   order: 10
-- name: awesome-archimate
-  url: https://github.com/jgsystemsconsulting/awesome-archimate
-  page: https://jgsystemsconsulting.github.io/awesome-archimate/
-  blurb: Curated ArchiMate resources for enterprise architecture and MBSE practitioners (specs, certification, Archi, plugins, books, example models).
+- name: jgs-archi-skills-we
+  url: https://github.com/jgsystemsconsulting/jgs-archi-skills-we
+  page: https://jgsystemsconsulting.github.io/jgs-archi-skills-we/
+  blurb: 'Worked examples for jgs-archi-skills: two fictional SOAM runs in Archi (a UK plate mill and a training UAS range), replayable job by job.'
   tier: free
   featured: false
   order: 11
+- name: jgs-lit-memory
+  url: https://github.com/jgsystemsconsulting/jgs-lit-memory
+  page: https://jgsystemsconsulting.github.io/jgs-lit-memory/
+  blurb: Capture academic papers (DOI, arXiv, OpenAlex id, or title) into a git-tracked literature corpus with a citation graph and offline inbox, inside each project; your coding agent queries it before re-searching.
+  tier: free
+  featured: false
+  order: 12
