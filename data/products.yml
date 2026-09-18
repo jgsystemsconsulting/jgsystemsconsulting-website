@@ -75,3 +75,10 @@ products:
   tier: free
   featured: false
   order: 10
+- name: awesome-archimate
+  url: https://github.com/jgsystemsconsulting/awesome-archimate
+  page: https://jgsystemsconsulting.github.io/awesome-archimate/
+  blurb: Curated ArchiMate resources for enterprise architecture and MBSE practitioners (specs, certification, Archi, plugins, books, example models).
+  tier: free
+  featured: false
+  order: 11
