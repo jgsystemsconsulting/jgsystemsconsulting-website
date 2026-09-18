@@ -89,3 +89,17 @@ products:
   tier: free
   featured: false
   order: 12
+- name: awesome-sysml-v2
+  url: https://github.com/jgsystemsconsulting/awesome-sysml-v2
+  page: https://jgsystemsconsulting.github.io/awesome-sysml-v2/
+  blurb: Curated SysML v2 resources for systems engineers and MBSE practitioners (specs, implementations, tooling, models and case studies, learning material).
+  tier: free
+  featured: false
+  order: 13
+- name: awesome-archimate
+  url: https://github.com/jgsystemsconsulting/awesome-archimate
+  page: https://jgsystemsconsulting.github.io/awesome-archimate/
+  blurb: Curated ArchiMate resources for enterprise architecture and MBSE practitioners (specs, certification, Archi, plugins, books, example models).
+  tier: free
+  featured: false
+  order: 14
