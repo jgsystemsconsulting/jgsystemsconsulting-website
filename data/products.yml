@@ -103,10 +103,17 @@ products:
   tier: free
   featured: false
   order: 14
+- name: awesome-magicgrid-mbse
+  url: https://github.com/jgsystemsconsulting/awesome-magicgrid-mbse
+  page: https://jgsystemsconsulting.github.io/awesome-magicgrid-mbse/
+  blurb: Curated MagicGrid MBSE methodology resources for practitioners (official material, Book of Knowledge, papers and case studies, training, talks, example models, tool support).
+  tier: free
+  featured: false
+  order: 15
 - name: awesome-digital-engineering
   url: https://github.com/jgsystemsconsulting/awesome-digital-engineering
   page: https://jgsystemsconsulting.github.io/awesome-digital-engineering/
   blurb: Curated digital engineering resources for practitioners (digital thread, MBD, policy and standards that bind them).
   tier: free
   featured: false
-  order: 15
+  order: 16
