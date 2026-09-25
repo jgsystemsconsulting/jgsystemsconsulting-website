@@ -117,3 +117,10 @@ products:
   tier: free
   featured: false
   order: 16
+- name: awesome-stpa
+  url: https://github.com/jgsystemsconsulting/awesome-stpa
+  page: https://jgsystemsconsulting.github.io/awesome-stpa/
+  blurb: Curated STAMP/STPA and hazard analysis resources for safety and systems engineering practitioners (handbooks, tools, standards context, case studies, datasets).
+  tier: free
+  featured: false
+  order: 17
