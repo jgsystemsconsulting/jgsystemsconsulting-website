@@ -70,9 +70,11 @@ section{padding:var(--pad-section) 0;border-bottom:1px solid var(--line)}
 .coming-soon summary::before{content:'+ ';font-family:var(--mono);color:var(--mute-2);font-weight:700}
 .coming-soon[open] summary::before{content:'\2212 '}
 .coming-soon summary:hover .label{color:var(--text-hi)}
-.masthead nav{margin-left:auto;display:flex;gap:1.25rem}
+.masthead nav{margin-left:auto;display:flex;gap:1.25rem;align-items:center}
 .masthead nav a{color:var(--mute);text-decoration:none}
 .masthead nav a:hover{color:var(--text-hi)}
+.brand{display:inline-flex;align-items:center}
+.brand img{display:block}
 footer{padding:var(--pad-section) 0;font-family:var(--mono);font-size:0.6875rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--mute);display:flex;flex-wrap:wrap;gap:1.5rem}
 footer a{color:var(--mute);text-decoration:none}
 footer a:hover{color:var(--text-hi)}
@@ -88,7 +90,7 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--text-hi);outline-offs
     <span>LICENCE: &copy; JG SYSTEMS CONSULTING LTD</span>
     <span>DOC-ID: JGSC-WEB-001</span>
     <span>REV 0.1.0</span>
-    <nav><a href="#products">Products</a><a href="licensing.html">Licensing</a><a href="academic.html">Academic</a><a href="#about">About</a><a href="https://www.jgsystemsconsulting.com">Consulting</a></nav>
+    <nav><a class="brand" href="index.html" aria-label="JG Systems Consulting home"><img src="images/jgs-emblem.png" alt="" width="28" height="28"></a><a href="#products">Products</a><a href="licensing.html">Licensing</a><a href="academic.html">Academic</a><a href="#about">About</a><a href="https://www.jgsystemsconsulting.com">Consulting</a></nav>
   </header>
 
   <section id="home">
