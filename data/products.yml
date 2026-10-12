@@ -28,7 +28,7 @@ products:
   buy: mailto:support@jgsystemsconsulting.com?subject=License%20enquiry:%20jgs-magic-sysmlv1-pro
 - name: jgs-se-knowledge-packs
   url: https://github.com/jgsystemsconsulting/jgs-se-knowledge-packs
-  blurb: 63 systems-engineering knowledge packs (+2 signposts) distilling vetted, licence-clean standards (NASA, DoD, FAA, NIST, GAO, SEBoK) into on-demand agent skills.
+  blurb: 64 systems-engineering knowledge packs, 4 signposts, and the /se orchestrator, distilling vetted, licence-clean standards (NASA, DoD, FAA, NIST, GAO, SEBoK) into on-demand agent skills.
   tier: free
   featured: true
   order: 4
@@ -124,3 +124,33 @@ products:
   tier: free
   featured: false
   order: 17
+- name: jgs-automotive-knowledge-packs
+  url: https://github.com/jgsystemsconsulting/jgs-automotive-knowledge-packs
+  blurb: 1 automotive knowledge pack, 2 signposts, and the /auto orchestrator. Licence-vetted sources for coding agents.
+  tier: free
+  featured: false
+  order: 18
+- name: jgs-aviation-knowledge-packs
+  url: https://github.com/jgsystemsconsulting/jgs-aviation-knowledge-packs
+  blurb: 2 aviation knowledge packs, 1 signpost, and the /aviation orchestrator. Licence-vetted sources for coding agents.
+  tier: free
+  featured: false
+  order: 19
+- name: jgs-med-device-knowledge-packs
+  url: https://github.com/jgsystemsconsulting/jgs-med-device-knowledge-packs
+  blurb: 1 medical-device knowledge pack and the /med orchestrator. Licence-vetted sources for coding agents.
+  tier: free
+  featured: false
+  order: 20
+- name: jgs-nuclear-knowledge-packs
+  url: https://github.com/jgsystemsconsulting/jgs-nuclear-knowledge-packs
+  blurb: 1 nuclear knowledge pack, 1 signpost, and the /nuclear orchestrator. Licence-vetted sources for coding agents.
+  tier: free
+  featured: false
+  order: 21
+- name: jgs-uk-defence-knowledge-packs
+  url: https://github.com/jgsystemsconsulting/jgs-uk-defence-knowledge-packs
+  blurb: 1 UK defence knowledge pack and the /ukdef orchestrator. Licence-vetted sources for coding agents.
+  tier: free
+  featured: false
+  order: 22
