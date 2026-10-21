@@ -67,6 +67,10 @@ a:focus-visible,.btn:focus-visible,input:focus-visible,textarea:focus-visible,se
 .form-status.ok{color:var(--text-hi);border-color:var(--line-2)}
 .form-status.err{color:#ffb4a8;border-color:#5a3a36}
 .hidden{display:none}
+.field-check{display:grid;grid-template-columns:auto 1fr;align-items:start;gap:.7rem}
+.field-check input{width:1rem;height:1rem;margin-top:.2rem;accent-color:var(--paper)}
+.field-check label{text-transform:none;letter-spacing:0;font-family:var(--sans);font-size:0.9375rem;font-weight:400;color:var(--text)}
+.field-check a{color:var(--text-hi)}
 </style>
 </head>
 <body>
@@ -179,8 +183,13 @@ a:focus-visible,.btn:focus-visible,input:focus-visible,textarea:focus-visible,se
       <div class="field">
         <label for="message">Intended use &amp; research area</label>
         <textarea id="message" name="message" placeholder="What you are building, the course or thesis, which tool/version, timeline."></textarea>
-      </div>
-      <!-- honeypot: bots fill this, humans don't -->
+    </div>
+    <div class="field field-check">
+      <input type="checkbox" id="eula_accept" name="eula_accept" value="accepted" required>
+      <label for="eula_accept">I have read and accept the <a href="eula.html" target="_blank" rel="noopener">Academic EULA</a> (version 2026-10). <span class="req">*</span></label>
+    </div>
+    <input type="hidden" name="eula_version" value="2026-10">
+    <!-- honeypot: bots fill this, humans don't -->
       <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
       <input type="hidden" name="_subject" value="Academic licence request (labs site)">
       <div>
