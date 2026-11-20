@@ -189,3 +189,9 @@ products:
   tier: free
   featured: false
   order: 22
+- name: Sentinel Log
+  page: https://sentinel.jgsystemsconsulting.com/
+  blurb: One living hazard register. Links hazard, cause, consequence, control, evidence and residual risk. Audit trail stays with the record.
+  tier: product
+  featured: false
+  order: 28
